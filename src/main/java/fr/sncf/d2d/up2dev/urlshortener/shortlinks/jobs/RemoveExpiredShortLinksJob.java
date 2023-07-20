@@ -26,7 +26,7 @@ public class RemoveExpiredShortLinksJob {
     @Scheduled(fixedRate = 10, initialDelay = 10, timeUnit = TimeUnit.MINUTES)
     public void start(){
         try {
-            this.logger.error("{} expired links were deleted", this.removeExpiredShortLinksUseCase.remove());
+            this.logger.info("{} expired links were deleted", this.removeExpiredShortLinksUseCase.remove());
         } catch (ShortLinksRemovalError e) {
             this.logger.error("an error occured while deleting expired short links", e);
         }
