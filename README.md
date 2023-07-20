@@ -44,7 +44,7 @@ X-Removal-Token: RRsdWMJGABe0OqMrzV0VVJKzqRZE8tpOtIrhZsmC
 
 {
     "id": "2bffc207-6fd5-4e1d-afc3-b09b4d380416";
-    "short-url": "http://mon-shortener.com/aX8Pm2wt",
+    "short-id": "aX8Pm2wt",
     "real-url": "https://url-a-raccourcir.com/"
 }
 ```
