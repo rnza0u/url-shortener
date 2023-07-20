@@ -28,7 +28,7 @@ Voici les services à implémenter et leur fonctionnement :
 
 Requête :
 
-```http
+```
 HTTP/1.1 POST /links
 Content-Type: application/json
 
@@ -37,7 +37,7 @@ Content-Type: application/json
 
 Réponse :
 
-```http
+```
 201 Created HTTP/1.1
 Content-Type: application/json
 X-Removal-Token: RRsdWMJGABe0OqMrzV0VVJKzqRZE8tpOtIrhZsmC
@@ -51,7 +51,7 @@ X-Removal-Token: RRsdWMJGABe0OqMrzV0VVJKzqRZE8tpOtIrhZsmC
 
 En cas de lien invalide :
 
-```http
+```
 HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
@@ -69,26 +69,26 @@ Une requête de suppression d'un lien existant doit contenir le token fourni dan
 
 Requête :
 
-```http
+```
 DELETE /links/2bffc207-6fd5-4e1d-afc3-b09b4d380416 HTTP/1.1
 X-Removal-Token: RRsdWMJGABe0OqMrzV0VVJKzqRZE8tpOtIrhZsmC
 ```
 
 En cas de suppression effective :
 
-```http
+```
 HTTP/1.1 204 No Content
 ```
 
 En cas de lien inexistant :
 
-```http
+```
 HTTP/1.1 404 Not Found
 ```
 
 En cas de token invalide :
 
-```http
+```
 HTTP/1.1 403 Forbidden
 ```
 
@@ -96,13 +96,13 @@ HTTP/1.1 403 Forbidden
 
 Pour profiter de nos liens raccourcis, on utilisera des requêtes de ce format:
 
-```http
+```
 GET /aX8Pm2wt HTTP/1.1
 ```
 
 En réponse le serveur devra rediriger vers l'URL complète:
 
-```http
+```
 HTTP/1.1 302 Found
 Location: https://url-a-raccourcir.com/
 ```
