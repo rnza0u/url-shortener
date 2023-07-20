@@ -1,4 +1,4 @@
-# Micro projet Nest
+# Micro projet Spring
 
 Vous devez développer un *URL Shortener* sous forme d'API REST.
 
