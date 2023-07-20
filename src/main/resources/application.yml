@@ -1,0 +1,7 @@
+
+application:
+    self-origin: http://localhost:8080/
+    links-path: ${java.io.tmpdir}/links.json
+spring:
+    mvc:
+        log-resolved-exception: false
