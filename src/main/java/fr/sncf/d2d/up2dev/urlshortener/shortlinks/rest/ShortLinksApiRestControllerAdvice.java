@@ -3,12 +3,9 @@ package fr.sncf.d2d.up2dev.urlshortener.shortlinks.rest;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import fr.sncf.d2d.up2dev.urlshortener.common.web.ApplicationExceptionHandler;
 import fr.sncf.d2d.up2dev.urlshortener.shortlinks.exceptions.InvalidRemovalTokenError;
