@@ -42,12 +42,14 @@ public class ApplicationExceptionHandler {
         final var source = trace[trace.length - 1];
 
         this.logger.error(
-            "{} {} ({}): {} ({} => {}:{})",
+            "{} {} from {}, {}: {} ({} => line {})",
             request.getMethod(),
             request.getServletPath(), 
             request.getRemoteAddr(),
+            error.getClass().getSimpleName(),
             error.getMessage(),
-            source.getFileName()
+            source.getFileName(),
+            source.getLineNumber()
         );
     }
     

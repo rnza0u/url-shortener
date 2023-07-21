@@ -34,7 +34,7 @@ public class ShortLinksApiRestControllerAdvice {
     
     @ExceptionHandler({ InvalidRemovalTokenError.class })
     public ResponseEntity<?> handleInvalidRemovalTokenError(Throwable ex, HttpServletRequest request, HttpServletResponse response){
-        return this.handler.handle(HttpStatus.UNAUTHORIZED, request, ex);
+        return this.handler.handle(HttpStatus.FORBIDDEN, request, ex);
     }
 
     @ExceptionHandler({ ShortLinkIdentifierGenerationError.class, ShortLinksRemovalError.class, ShortLinkSaveError.class })

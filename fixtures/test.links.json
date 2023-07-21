@@ -1,0 +1,26 @@
+[
+    {
+        "id": "b48b1568-e834-4bb6-907c-63c44205bcc8",
+        "shortId": "5bC36ac4",
+        "realUrl": "https://www.amazon.com/",
+        "removalToken": "0dfa3f73c504a92ba573302f22113f03",
+        "createdAt": "1970-01-01T00:00:00.000Z",
+        "lastAccessedAt": "1970-01-01T00:00:00.000Z"
+    },
+    {
+        "id": "76536841-a4d3-470a-867a-bf7b829c0736",
+        "shortId": "07EaFbe7",
+        "realUrl": "https://youtube.com/",
+        "removalToken": "270cd5c8b625508bb4223bd852b4e9bd",
+        "createdAt": "1970-01-01T00:00:00.000Z",
+        "lastAccessedAt": "1970-01-10T00:00:00.000Z"
+    },
+    {
+        "id": "7132e9a9-e8f5-49c7-8472-e8167def87c7",
+        "shortId": "1a48e0cE",
+        "removalToken": "cd2b6a3ac1db9cfe26608373041fef14",
+        "realUrl": "https://www.google.com/",
+        "createdAt": "1970-01-01T00:00:00.000Z",
+        "lastAccessedAt": "1970-02-01T00:00:00.000Z"
+    }
+]
