@@ -65,7 +65,7 @@ public class TokensService {
             SecureRandom.getInstanceStrong().nextBytes(bytes);
             return IntStream.range(0, bytes.length)
                 .mapToObj(i -> bytes[i])
-                .map(i -> SHORT_ID_ALPHABET[(((int)i) + Byte.MAX_VALUE) % SHORT_ID_ALPHABET.length])
+                .map(i -> SHORT_ID_ALPHABET[Byte.toUnsignedInt(i) % SHORT_ID_ALPHABET.length])
                 .collect(Collectors.joining());
         } catch(NoSuchAlgorithmException ex){
             throw new ShortLinkIdentifierGenerationError(ex);
