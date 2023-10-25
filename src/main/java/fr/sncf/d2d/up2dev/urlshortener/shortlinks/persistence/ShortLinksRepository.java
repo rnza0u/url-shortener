@@ -126,7 +126,7 @@ public class ShortLinksRepository {
     }
 
     private void write() throws IOException {
-        Files.write(this.repositoryFilePath, this.objectMapper.writeValueAsBytes(this.links.values().stream().toList()));
+        this.objectMapper.writeValue(this.repositoryFilePath.toFile(), this.links);
     }
 
     public static enum InitState {
