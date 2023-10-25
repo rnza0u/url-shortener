@@ -34,7 +34,7 @@ public class GlobalControllerAdvice {
     }
     
     /* Un "catch-all" pour toutes les erreurs non gérées. */
-    @ExceptionHandler({ Throwable.class })
+    @ExceptionHandler({ Exception.class })
     public ResponseEntity<?> catchAll(Exception exception, HttpServletRequest request, HttpServletResponse response){
         return this.handler.handle(HttpStatus.INTERNAL_SERVER_ERROR, request, exception);
     }

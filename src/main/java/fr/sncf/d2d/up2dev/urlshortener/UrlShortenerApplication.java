@@ -9,8 +9,15 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class UrlShortenerApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(UrlShortenerApplication.class, args);
+
+		while (true){
+
+			// taches planifiées
+
+			Thread.sleep(100000);
+		}
 	}
 
 }

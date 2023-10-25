@@ -115,6 +115,12 @@ Tous les liens qui n'ont pas été accédés depuis plus de 30 jours doivent êt
 
 Sauf pour les liens invalides où un corps de réponse d'erreur sera présent, toutes les erreurs doivent faire l'objet d'un corps de réponse vide.
 
+Toutes les erreurs doivent faire l'objet d'une journalisation au format suivant :
+
+```
+<méthode> <chemin HTTP> from <addresse IP source>, <type de l'erreur>: <message d'erreur> (<fichier source> => <ligne de code>)
+```
+
 Les erreurs non explicitement gérées dans le code doivent faire l'objet de code `500`.
 
 ### Contraintes techniques

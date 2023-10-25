@@ -39,7 +39,7 @@ public class ApplicationExceptionHandler {
     private void log(HttpServletRequest request, Throwable error){
 
         final var trace = error.getStackTrace();
-        final var source = trace[trace.length - 1];
+        final var source = trace[0];
 
         this.logger.error(
             "{} {} from {}, {}: {} ({} => line {})",
