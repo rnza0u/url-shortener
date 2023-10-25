@@ -37,12 +37,12 @@ public class ShortLinksRepository {
     }
 
     /**
-     * Liens stockés en mémoire, à ce stade la base de données se résume à ce simple tableau.
+     * Liens stockés en mémoire, à ce stade la base de données se résume à ce simple dictionnaire.
      */
     private final Map<UUID, ShortLink> links = new HashMap<>();
     
     // Ces deux dictionnaires font office d'index pour accéder rapidement à un lien via différents types d'identifiants.
-    // Sans ces deux index, on serait forcés de parcourir potentiellement l'ensemble du tableau à chaque recherche
+    // Sans ces deux index, on serait forcés de parcourir potentiellement l'ensemble du dic principal à chaque recherche
     // de lien.
     private final Map<UUID, UUID> primaryIdIndex = new HashMap<>();
     private final Map<String, UUID> shortIdIndex = new HashMap<>();
@@ -126,7 +126,7 @@ public class ShortLinksRepository {
     }
 
     private void write() throws IOException {
-        this.objectMapper.writeValue(this.repositoryFilePath.toFile(), this.links);
+        this.objectMapper.writeValue(this.repositoryFilePath.toFile(), this.links.values());
     }
 
     public static enum InitState {

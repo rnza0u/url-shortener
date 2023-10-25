@@ -16,7 +16,7 @@ public class ShortLinkRedirectionsController {
         this.accessShortLinkUseCase = accessShortLinkUseCase;
     }
     
-    @GetMapping("/{shortId}")
+    @GetMapping("/{shortId:[a-zA-Z0-9]{8}}")
     public void accessShortLink(@PathVariable("shortId") String shortId, HttpServletResponse response) throws Exception {
         final var url = this.accessShortLinkUseCase.access(shortId);
         response.sendRedirect(url.toString());
