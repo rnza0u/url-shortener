@@ -53,7 +53,7 @@ public final class ShortLink {
     }
 
     public boolean isExpired(Instant now){
-        return this.lastAccessedAt.toInstant().plus(DURATION_BEFORE_EXPIRATION).isAfter(now);
+        return this.lastAccessedAt.toInstant().plus(DURATION_BEFORE_EXPIRATION).isBefore(now);
     }
 
     public URL access(Instant now){

@@ -23,7 +23,7 @@ public class RemoveExpiredShortLinksJob {
     }
 
     // le job consiste à appeler la usecase toutes les 10 minutes, et logger le résultat en cas d'erreur.
-    @Scheduled(fixedRate = 10, initialDelay = 10, timeUnit = TimeUnit.MINUTES)
+    @Scheduled(fixedRate = 10, timeUnit = TimeUnit.MINUTES)
     public void start(){
         try {
             this.logger.info("{} expired links were deleted", this.removeExpiredShortLinksUseCase.remove());
