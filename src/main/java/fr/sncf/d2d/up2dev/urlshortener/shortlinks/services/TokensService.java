@@ -1,14 +1,11 @@
 package fr.sncf.d2d.up2dev.urlshortener.shortlinks.services;
 
-import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.util.Collections;
 import java.util.HexFormat;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 import org.springframework.stereotype.Service;
 
